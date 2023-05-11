@@ -1,49 +1,102 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Workit landing page</title>
-</head>
-<body>
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="fonts.css" />
 
-  Apply for access
+    <title>Frontend Mentor | Workit landing page</title>
+  </head>
+  <body>
+    <img class="hero" src="assets/images/image-hero.webp" alt="" />
+    <header class="flex header">
+      <div class="flex header-logo">
+        <img src="assets/images/logo-light.svg" alt="workit logo" />
+        <a href="#" class="link">Apply for access</a>
+      </div>
+      <img class="bg-pattern-1" src="assets/images/bg-pattern-1.svg" alt="" />
+      <img class="bg-pattern-2" src="assets/images/bg-pattern-2.svg" alt="" />
+      <div class="flex header-text">
+        <h1 class="heading-l text-white text-align">
+          Data <span>tailored</span> to your needs.
+        </h1>
+        <button class="primary-button">Learn more</button>
+      </div>
+    </header>
 
-  Data tailored to your needs.
+    <main id="main">
+      <div class="grid container-card">
+        <section class="flex card">
+          <div class="heading-s numbered-title">1</div>
+          <h3 class="heading-s text-dark">Actionable insights</h3>
+          <p class="body-text">
+            Optimize your products, improve customer satisfaction and stay ahead
+            of the competition with our product data analytics.
+          </p>
+        </section>
+        <section class="flex card">
+          <div class="heading-s numbered-title">2</div>
 
-  Learn more
-  
-  1
+          <h3 class="heading-s text-dark">Data-driven decisions</h3>
 
-  Actionable insights
-  
-  Optimize your products, improve customer satisfaction and stay ahead of the competition 
-  with our product data analytics.
+          <p class="body-text">
+            Make data-driven decisions with our product data analytics. Our
+            AI-generated reports help you unlock insights hidden in your product
+            data.
+          </p>
+        </section>
+        <section class="flex card">
+          <div class="heading-s numbered-title">3</div>
 
-  2
+          <h3 class="heading-s text-dark">Always affordable</h3>
 
-  Data-driven decisions
+          <p class="body-text">
+            Always affordable pricing that scales with your business. Get
+            top-quality product data analytics services without hidden costs or
+            unexpected fees.
+          </p>
+        </section>
+      </div>
+      <div class="container-founder">
+        <img
+          class="img-founder"
+          src="assets/images/image-founder.webp"
+          alt="" />
+        <div class="founder">
+          <h2 class="heading-m text-white">Be the first to test</h2>
 
-  Make data-driven decisions with our product data analytics. Our AI-generated reports help 
-  you unlock insights hidden in your product data.
+          <p class="body-text text-white">
+            Hi, I'm Louis Graham, the founder of the company. Book a demo call
+            with me to become a beta tester for our app and kickstart your
+            company. Apply for access below and I’ll be in touch to schedule a
+            call.
+          </p>
 
-  3
+          <button class="primary-button">Apply for access</button>
+          <img
+            class="bg-pattern-3"
+            src="assets/images/bg-pattern-3.svg"
+            alt="" />
+        </div>
+      </div>
+    </main>
+    <footer class="flex footer">
+      <div class="flex footer-content">
+        <img src="assets/images/logo-dark.svg" alt="" />
 
-  Always affordable
-
-  Always affordable pricing that scales with your business. Get top-quality product data 
-  analytics services without hidden costs or unexpected fees.
-
-  Be the first to test
-
-  Hi, I'm Louis Graham, the founder of the company. Book a demo call with me to become a 
-  beta tester for our app and kickstart your company. Apply for access below and I’ll be 
-  in touch to schedule a call.
-
-  Apply for access
-
-</body>
+        <div class="flex social">
+          <a href="#"><img src="assets/images/icon-facebook.svg" alt="" /></a>
+          <a href="#"> <img src="assets/images/icon-twitter.svg" alt="" /></a>
+          <a href="#"><img src="assets/images/icon-instagram.svg" alt="" /></a>
+        </div>
+      </div>
+    </footer>
+  </body>
 </html>
