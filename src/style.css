@@ -10,7 +10,7 @@
   --fs-large: 5rem;
   --fs-medium: 3.5rem;
   --fs-small: 2rem;
-  --fs-body: 1.125rem;
+  --fs-body: 1rem;
 
   /* line-height */
   --lh-large: 5rem;
@@ -271,14 +271,12 @@ select {
   display: none;
   position: absolute;
   top: 5rem;
-  left: -8rem;
 }
 
 .bg-pattern-2 {
   display: none;
   position: absolute;
   top: 15rem;
-  right: -2rem;
 }
 
 .link {
@@ -322,14 +320,22 @@ select {
   flex-direction: column;
   align-items: center;
   text-align: center;
+  gap: 2rem;
+}
+
+.card-detail {
+  flex-direction: column;
 }
 
 .numbered-title {
   border: 1px solid;
   padding: 0.5rem;
   border-radius: 50%;
-  height: 3.5rem;
-  width: 3.5rem;
+  height: 3rem;
+  width: 3rem;
+  font-family: var(--ff-fraunces);
+  font-weight: 600;
+  text-align: center;
 }
 
 .container-founder {
@@ -386,20 +392,17 @@ select {
   text-align: center;
 }
 
+/* Tablet */
 /* stylelint-disable-next-line media-feature-range-notation */
 @media (min-width: 35em) {
   .header {
-    min-height: 45rem;
+    min-height: 35rem;
   }
 
   .header::before {
-    width: 45%;
+    top: 75%;
+    width: 70%;
     aspect-ratio: 1.7392;
-  }
-
-  .heading-l {
-    font-size: var(--fs-large);
-    line-height: var(--lh-large);
   }
 
   .bg-pattern-1,
@@ -408,29 +411,51 @@ select {
     display: block;
   }
 
-  .founder {
-    width: 60%;
-    padding: 4rem;
-    top: 10rem;
-    right: 10rem;
+  .bg-pattern-1 {
+    left: -15rem;
+  }
+
+  .bg-pattern-2 {
+    right: -6rem;
+  }
+
+  .card {
+    flex-direction: row;
+    align-items: center;
+    text-align: left;
+  }
+
+  .container-founder {
+    height: 44rem;
   }
 
   .img-founder {
-    position: absolute;
-    max-width: 25%;
-    top: 0;
-    left: 10rem;
+    max-width: 45%;
+  }
+
+  .founder {
+    width: 70%;
+    top: 10rem;
+    left: auto;
+    right: 2.5rem;
+    align-items: start;
+    text-align: start;
+  }
+
+  .bg-pattern-3 {
+    right: 3.25rem;
   }
 }
 
 /* stylelint-disable-next-line media-feature-range-notation */
-@media (min-width: 45em) {
+@media (min-width: 55em) {
   .header {
     min-height: 45rem;
   }
 
   .header::before {
-    width: 100%;
+    top: 65%;
+    width: 70%;
     aspect-ratio: 1.7392;
   }
 
@@ -444,22 +469,36 @@ select {
     display: block;
   }
 
+  .bg-pattern-1 {
+    left: -8rem;
+  }
+
+  .bg-pattern-2 {
+    right: -2rem;
+  }
+
   .container-card {
     grid-auto-flow: column;
     padding: 15rem 10rem;
   }
 
+  .card {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
   .founder {
     width: 60%;
     padding: 4rem;
-    top: 10rem;
-    right: 10rem;
+    top: 15rem;
+    right: 5rem;
   }
 
   .img-founder {
     position: absolute;
-    max-width: 25%;
+    max-width: 40%;
     top: 0;
-    left: 10rem;
+    left: 5rem;
   }
 }
