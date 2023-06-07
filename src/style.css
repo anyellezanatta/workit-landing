@@ -19,7 +19,6 @@
   --lh-body: 2rem;
 
   /* font-family */
-
   --ff-fraunces: "Fraunces", arial;
   --ff-manrope: "Manrope", sans-serif;
 }
@@ -81,8 +80,7 @@ body {
   min-height: 100dvh;
   text-rendering: optimizespeed;
   line-height: 1.5;
-
-  /* overflow-x: hidden; */
+  overflow-x: hidden;
 }
 
 /* A elements that don't have a class get default styles */
@@ -158,16 +156,6 @@ select {
 }
 
 /* components */
-.header-logo {
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-between;
-  padding: 2rem;
-}
-
-.logo {
-  align-self: flex-start;
-}
 
 .heading-l {
   font-family: var(--ff-fraunces);
@@ -206,7 +194,7 @@ select {
   background-color: hsl(var(--clr-green));
   color: hsl(var(--clr-dark-purple));
   border: 1px solid hsl(var(--clr-dark-purple));
-  padding: 0.5rem;
+  padding: 1rem 2rem;
   font-weight: 700;
   cursor: pointer;
 }
@@ -220,10 +208,12 @@ select {
 
 .header {
   flex-direction: column;
+  align-items: center;
   background-color: hsl(var(--clr-dark-purple));
-  min-height: 45rem;
+  min-height: 30rem;
   position: relative;
   width: 100%;
+  gap: 2.5rem;
 }
 
 .header::after {
@@ -242,47 +232,72 @@ select {
   mask-repeat: no-repeat;
 }
 
-.header-text {
-  flex-direction: column;
-  align-items: center;
-  gap: 2rem;
+.header::before {
+  content: "";
+  position: absolute;
+  z-index: 1000;
+  top: 85%;
+  width: 80%;
+  aspect-ratio: 1.7392;
+  background-image: url("assets/images/image-hero.webp");
+  background-repeat: no-repeat;
+  background-size: contain;
 }
 
-.text-align {
-  max-width: 35rem;
+.header-logo {
+  flex-direction: row;
+  justify-content: space-between;
+  align-self: stretch;
+  padding: 2rem;
+}
+
+.logo {
+  align-self: flex-start;
+}
+
+.header-text {
+  max-width: 12ch;
+  padding-inline: 1rem;
+  font-size: var(--fs-medium);
+  line-height: var(--lh-medium);
+}
+
+.title-social {
+  font-size: var(--fs-small);
+  line-height: var(--lh-small);
 }
 
 .bg-pattern-1 {
+  display: none;
   position: absolute;
   top: 5rem;
   left: -8rem;
 }
 
 .bg-pattern-2 {
+  display: none;
   position: absolute;
   top: 15rem;
   right: -2rem;
 }
 
-.hero {
-  position: absolute;
-  top: 25rem;
-  left: 25%;
-  max-width: 50%;
-}
-
 .link {
+  text-decoration: none;
   color: hsl(var(--clr-white));
   border-bottom: 3px solid;
   border-color: hsl(var(--clr-green));
 }
 
+.link:hover {
+  color: hsl(var(--clr-green));
+}
+
 .container-card {
   position: relative;
-  column-gap: 2rem;
-  grid-auto-flow: column;
+  column-gap: 2.5rem;
+  grid-auto-flow: row;
   background-color: hsl(var(--clr-light));
-  padding: 15rem 10rem;
+  padding: 10rem 1rem;
   min-height: 45rem;
   z-index: -1;
 }
@@ -319,26 +334,31 @@ select {
 
 .container-founder {
   position: relative;
-  height: 600px;
+  height: 50rem;
 }
 
 .founder {
   position: absolute;
-  width: 60%;
+  flex-direction: column;
+  row-gap: 1rem;
+  align-items: center;
+  text-align: center;
   background-color: hsl(var(--clr-dark-purple));
   padding: 4rem;
-  top: 10rem;
-  right: 10rem;
+  top: 20rem;
+  left: 1rem;
+  right: 1rem;
 }
 
 .img-founder {
   position: absolute;
-  max-width: 25%;
+  max-width: 100%;
   top: 0;
-  left: 10rem;
+  padding: 3rem;
 }
 
 .bg-pattern-3 {
+  display: none;
   position: absolute;
   right: 10rem;
   bottom: -5rem;
@@ -364,4 +384,82 @@ select {
   justify-content: center;
   width: 100%;
   text-align: center;
+}
+
+/* stylelint-disable-next-line media-feature-range-notation */
+@media (min-width: 35em) {
+  .header {
+    min-height: 45rem;
+  }
+
+  .header::before {
+    width: 45%;
+    aspect-ratio: 1.7392;
+  }
+
+  .heading-l {
+    font-size: var(--fs-large);
+    line-height: var(--lh-large);
+  }
+
+  .bg-pattern-1,
+  .bg-pattern-2,
+  .bg-pattern-3 {
+    display: block;
+  }
+
+  .founder {
+    width: 60%;
+    padding: 4rem;
+    top: 10rem;
+    right: 10rem;
+  }
+
+  .img-founder {
+    position: absolute;
+    max-width: 25%;
+    top: 0;
+    left: 10rem;
+  }
+}
+
+/* stylelint-disable-next-line media-feature-range-notation */
+@media (min-width: 45em) {
+  .header {
+    min-height: 45rem;
+  }
+
+  .header::before {
+    width: 100%;
+    aspect-ratio: 1.7392;
+  }
+
+  .heading-l {
+    font-size: var(--fs-large);
+    line-height: var(--lh-large);
+  }
+
+  .bg-pattern-1,
+  .bg-pattern-2 {
+    display: block;
+  }
+
+  .container-card {
+    grid-auto-flow: column;
+    padding: 15rem 10rem;
+  }
+
+  .founder {
+    width: 60%;
+    padding: 4rem;
+    top: 10rem;
+    right: 10rem;
+  }
+
+  .img-founder {
+    position: absolute;
+    max-width: 25%;
+    top: 0;
+    left: 10rem;
+  }
 }
