@@ -6,6 +6,7 @@ This is an implementation of the workit landing challenge from frontendmentor us
 
 ## Stack
 
+- Vite
 - HTML 5
 - Modern CSS
 - Stylelint
