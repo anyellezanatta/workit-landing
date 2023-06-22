@@ -448,14 +448,14 @@ select {
 }
 
 /* stylelint-disable-next-line media-feature-range-notation */
-@media (min-width: 55em) {
+@media (min-width: 45em) {
   .header {
     min-height: 45rem;
   }
 
   .header::before {
     top: 65%;
-    width: 70%;
+    width: 60%;
     aspect-ratio: 1.7392;
   }
 
@@ -500,5 +500,16 @@ select {
     max-width: 40%;
     top: 0;
     left: 5rem;
+  }
+
+  /* stylelint-disable-next-line media-feature-range-notation */
+  @media (min-width: 60em) {
+    .header::before {
+      width: 60%;
+    }
+
+    .container-card {
+      padding: 30rem 10rem;
+    }
   }
 }
