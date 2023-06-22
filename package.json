@@ -16,5 +16,16 @@
     "stylelint-config-standard": "^33.0.0",
     "vite": "^4.3.2"
   },
+  "prettier": {
+    "bracketSameLine": true
+  },
+  "stylelint": {
+    "extends": [
+      "stylelint-config-standard"
+    ],
+    "ignoreFiles": [
+      "dist/**/*"
+    ]
+  },
   "packageManager": "yarn@3.5.1"
 }
